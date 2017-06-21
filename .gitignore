@@ -18,4 +18,4 @@ hs_err_pid*
 .metadata*
 code/TIJ4/.classpath
 code/TIJ4/.project
-code/TIJ4/.settings/org.eclipse.jdt.core.prefs
+code/TIJ4/.settings/*
