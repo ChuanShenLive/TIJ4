@@ -14,7 +14,8 @@
 hs_err_pid*
 
 # Eclipse Files
-.metadata*
+code/.metadata/*
+code/.recommenders/*
 code/TIJ4/.classpath
 code/TIJ4/.project
 code/TIJ4/.settings/*
