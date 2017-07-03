@@ -13,6 +13,7 @@ public class InheritInner extends WithInner.Inner {
 		wi.super();
 	}
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		WithInner wi = new WithInner();
 		InheritInner ii = new InheritInner(wi);

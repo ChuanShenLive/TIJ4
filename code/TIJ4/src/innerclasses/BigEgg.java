@@ -5,6 +5,7 @@ package innerclasses;
 
 import static net.mindview.util.Print.*;
 class Egg {
+	@SuppressWarnings("unused")
 	private Yolk y;
 	protected class Yolk {
 		public Yolk() {
