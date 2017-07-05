@@ -7,6 +7,7 @@ import java.io.StringWriter;
 import java.util.logging.Logger;
 
 class LoggingException extends Exception {
+	private static final long serialVersionUID = 2350338473809849253L;
 	private static Logger logger = Logger.getLogger("LogginException");
 	public LoggingException() {
 		StringWriter trace = new StringWriter();
