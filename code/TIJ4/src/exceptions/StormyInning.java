@@ -37,12 +37,13 @@ interface Storm {
 	public void event() throws RainedOut;
 	public void rainHard() throws RainedOut;
 }
+
 public class StormyInning extends Inning implements Storm {
 
 	// OK to add new exceptions for constructors, but you
 	// must deal with the base constructor exceptions:
 	public StormyInning() 
-		throws Foul, BaseballException {
+		throws RainedOut, BaseballException {
 		
 	}
 
@@ -52,26 +53,55 @@ public class StormyInning extends Inning implements Storm {
 	}
 	
 	//Regular methods must conform to base class:
-	// public void walk() throws PopFoul {}	// Compile error
+	//! public void walk() throws PopFoul {}	// Compile error
 	
 	// Interface CANNOT add exceptions to existing
 	// methods from the base class:
-	public vid event() throws RAined
+	//! public void event() throws RainedOut {}
 	
-	@Override
+	// You can chose to not throw any exceptions,
+	// even if the base version dose:
+	public void event() {
+		
+	}
+	
+	// If the method doesn't already exist in the
+	// base class, the exception is OK.
 	public void rainHard() throws RainedOut {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void atBat() throws Strike, Foul {
-		// TODO Auto-generated method stub
 		
 	}
 	
-	@Override
-	public void event() throws BaseballException {
+	// Overridden methods can throw inherited exception:
+	public void atBat() throws PopFoul {
 		
 	}
-}
+	
+	public static void main(String[] args) {
+		try {
+			StormyInning si = new StormyInning();
+			si.atBat();
+		} catch (PopFoul e) {
+			System.out.println("Pop foul");
+		} catch(RainedOut e) {
+			System.out.println("Rained out");
+		} catch(BaseballException e) {
+			System.out.println("Generic baseball exception");
+		}
+		
+		try {
+			// What happens if you upcast?
+			Inning i = new StormyInning();
+			i.atBat();
+			// You must catch the exceptions from the
+			// base-class version of the method:
+		} catch(Strike e) {
+			System.out.println("Strike");
+		} catch (Foul e) {
+			System.out.println("Foul");
+		} catch(RainedOut e) {
+			System.out.println("Rained out");
+		} catch(BaseballException e) {
+			System.out.println("Generic baseball exception");
+		}
+	}
+}///:~
