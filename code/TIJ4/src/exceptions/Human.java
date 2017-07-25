@@ -1,10 +1,15 @@
 //: exceptions/Human.java
 // Catching exception hierarchies.
 package exceptions;
+
+@SuppressWarnings("serial")
 class Annoyance extends Exception {}
+
+@SuppressWarnings("serial")
 class Sneeze extends Annoyance {}
 
 public class Human {
+	@SuppressWarnings("hiding")
 	public static void main(String[] args) {
 		// Catch the exact type:
 		try {
