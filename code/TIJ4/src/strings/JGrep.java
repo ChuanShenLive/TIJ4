@@ -26,4 +26,23 @@ public class JGrep {
 					m.group() + ": " + m.start());
 		}
 	}
-}
+} /* Output:
+0: strings: 4
+1: simple: 10
+2: the: 28
+3: Ssct: 26
+4: strings: 8
+5: class: 7
+6: static: 8
+7: String: 25
+8: throws: 40
+9: System: 3
+10: System: 3
+11: compile: 22
+12: through: 13
+13: the: 21
+14: the: 34
+15: String: 6
+16: System: 4
+17: start: 26
+*///:~
