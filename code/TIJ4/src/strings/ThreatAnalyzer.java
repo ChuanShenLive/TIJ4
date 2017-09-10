@@ -23,6 +23,7 @@ public class ThreatAnalyzer {
 			String date = match.group(2);
 			System.out.format("Threat on %s from %s\n", date, ip);
 		}
+		scanner.close();
 	}
 } /* Output:
 Threat on 02/10/2005 from 58.27.82.161
