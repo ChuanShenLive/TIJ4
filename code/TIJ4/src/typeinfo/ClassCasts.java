@@ -4,6 +4,7 @@ package typeinfo;
 class Building {}
 class House extends Building {}
 public class ClassCasts {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Building b = new House();
 		Class<House> houseType = House.class;
