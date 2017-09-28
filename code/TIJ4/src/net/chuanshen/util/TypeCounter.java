@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TypeCounter extends HashMap<Class<?>, Integer> {
+
+	private static final long serialVersionUID = 1L;
 	private Class<?> baseType;
 	
 	public TypeCounter(Class<?> baseType) {
