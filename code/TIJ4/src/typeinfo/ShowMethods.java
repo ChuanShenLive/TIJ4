@@ -20,6 +20,7 @@ public class ShowMethods {
 	
 	private static Pattern p = Pattern.compile("\\w+\\.");
 	
+	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) {
 		if(args.length < 1) {
 			print(usage);
@@ -69,4 +70,4 @@ public final native Class getClass()
 public final native void notify()
 public final native void notifyAll()
 public ShowMethods()
-*///£º~
+*///ï¿½ï¿½~
