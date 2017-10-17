@@ -3,6 +3,7 @@ package typeinfo;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("serial")
 public class Staff extends ArrayList<Position> {
 	public void add(String title, Person person) {
 		add(new Position(title, person));
