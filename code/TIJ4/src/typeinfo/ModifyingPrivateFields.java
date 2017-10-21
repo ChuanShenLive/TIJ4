@@ -24,6 +24,20 @@ public class ModifyingPrivateFields {
 		f = pf.getClass().getDeclaredField("s");
 		f.setAccessible(true);
 		System.out.println("f.get(pf): " + f.get(pf));
-		
+		f.set(pf, "No, you're not!");
+		System.out.println(pf);
+		f = pf.getClass().getDeclaredField("s2");
+		f.setAccessible(true);
+		System.out.println("f.get(pf): " + f.get(pf));
+		f.set(pf, "No, you're not!");
+		System.out.println(pf);;
 	}
-}
+} /* Output: 
+i = 1, I'm totally safe, Am I safe?
+f.getInt(pf): 1
+i = 47, I'm totally safe, Am I safe?
+f.get(pf): I'm totally safe
+i = 47, I'm totally safe, Am I safe?
+f.get(pf): Am I safe?
+i = 47, I'm totally safe, No, you're not!
+*///:~
