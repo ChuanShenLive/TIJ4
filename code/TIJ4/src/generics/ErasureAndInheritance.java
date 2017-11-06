@@ -25,7 +25,7 @@ class Derived2<T> extends GenreicBase<T> {
 //      required: class or interface without bounds
 
 public class ErasureAndInheritance {
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public static void main(String[] args) {
         Derived2 d2 = new Derived2();
         Object obj = d2.get();
