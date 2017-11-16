@@ -1,3 +1,4 @@
+//:generics/ArrayOfGeneric
 package generics;
 
 public class ArrayOfGeneric {
@@ -10,7 +11,7 @@ public class ArrayOfGeneric {
         //！ gia = (Generic<Integer>[]) new Object[SIZE];
         // Runtime type is the raw (erased) type:
         gia = (Generic<Integer>[]) new Generic[SIZE];
-        System.out.println(gia.getClass().getSimpleName());
+            System.out.println(gia.getClass().getSimpleName());
         gia[0] = new Generic<Integer>();
         //! gia[1] = new Object();  // Compile-time error
         // Descovers type mismatch at compile time:

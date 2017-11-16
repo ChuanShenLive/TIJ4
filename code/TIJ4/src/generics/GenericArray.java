@@ -29,4 +29,4 @@ public class GenericArray<T> {
         // This is OK;
         Object[] oa = gai.rep();
     }
-}
+} ///:~
