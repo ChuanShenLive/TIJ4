@@ -2,6 +2,8 @@
 // Demonstrating bounds in Java generics.
 package generics;
 
+import java.util.List;
+
 interface SuperPower {
 
 }
@@ -47,8 +49,50 @@ class CanineHero<POWER extends SuperHearing & SuperSmell> extends SuperHero<POWE
         power.hearSubtleNoises();
     }
 
-    void smell
+    void smell() {
+        power.trackBySmell();
+    }
+}
+
+class SuperHearSmell implements SuperHearing, SuperSmell {
+    public void hearSubtleNoises() {
+    }
+
+    public void trackBySmell() {
+    }
+}
+
+class DogBoy extends CanineHero<SuperHearSmell> {
+    DogBoy() {
+        super(new SuperHearSmell());
+    }
 }
 
 public class EpicBattle {
+    // Bounds in generic methods:
+    static <POWER extends SuperHearing>
+    void useSuperHearing(SuperHero<POWER> hero) {
+        hero.getPower().hearSubtleNoises();
+    }
+
+    <POWER extends SuperHearing & SuperSmell>
+    void superFind(SuperHero<POWER> hero) {
+        hero.getPower().hearSubtleNoises();
+        hero.getPower().trackBySmell();;
+    }
+
+
+
+    public static <POWER extends SuperHearing & SuperSmell> void main(String[] args) {
+        EpicBattle eb = new EpicBattle();
+        DogBoy dogBoy = new DogBoy();
+        useSuperHearing(dogBoy);
+        eb.superFind(dogBoy);
+        // You can do this
+
+        List<? extends SuperHearing> audioBoys;
+        // But you can't do this:
+        // List<? extends SuperHearing & SuperSmell> dogBoys;
+        List<POWER> dogBoys;
+    }
 }
