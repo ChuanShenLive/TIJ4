@@ -2,15 +2,21 @@
 package generics;
 
 class Fruit {
-
+    public void fruit() {
+        System.out.println("fruit");
+    }
 }
 
 class Apple extends Fruit {
-
+    public void apple() {
+        System.out.println("Apple");
+    }
 }
 
 class Jonathan extends Apple {
-
+    public void jonathan() {
+        System.out.println("jonathan");
+    }
 }
 
 class Orange extends Fruit {
