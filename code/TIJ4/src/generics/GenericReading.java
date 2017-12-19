@@ -13,7 +13,8 @@ public class GenericReading {
     static List<Fruit> fruit = Arrays.asList(new Fruit());
 
     // A static method adapts to each call:
-    static void f1() {
+    @SuppressWarnings("unused")
+	static void f1() {
         Apple a = readExact(apples);
         Fruit f = readExact(fruit);
         f = readExact(apples);
@@ -27,7 +28,8 @@ public class GenericReading {
         }
     }
 
-    static void f2() {
+    @SuppressWarnings("unused")
+	static void f2() {
         Reader<Fruit> fruitReader = new Reader<Fruit>();
         Fruit f = fruitReader.readExact(fruit);
         // Fruit a = fruitReader.readExact(apples);    // Error:
@@ -40,7 +42,8 @@ public class GenericReading {
         }
     }
 
-    static void f3() {
+    @SuppressWarnings("unused")
+	static void f3() {
         CovariantReader<Fruit> fruitReader =
                 new CovariantReader<Fruit>();
         Fruit f = fruitReader.readCovariant(fruit);

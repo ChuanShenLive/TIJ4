@@ -5,7 +5,8 @@ public class ArrayOfGeneric {
     static final int SIZE = 100;
     static Generic<Integer>[] gia;
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unchecked")
+	public static void main(String[] args) {
 
         // Compoles: produces ClassCastException:
         //！ gia = (Generic<Integer>[]) new Object[SIZE];

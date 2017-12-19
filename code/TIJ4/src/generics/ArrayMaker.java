@@ -1,8 +1,6 @@
 //: generics/ArrayMaker.java
 package generics;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.lang.reflect.Array;
 import java.util.Arrays;
 

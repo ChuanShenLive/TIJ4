@@ -6,7 +6,7 @@ package generics;
 public class Erased <T> {
     private final int SIZE = 100;
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "unused" })
     public void f(Object arg) {
         // if (arg instanceof  T) {}    //ERROR
         // T var = new T();             //ERROR

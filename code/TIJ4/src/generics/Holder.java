@@ -19,7 +19,8 @@ public class Holder<T> {
         return value.equals(obj);
     }
 
-    public static void main(String[] args) {
+    @SuppressWarnings({ "unused", "unlikely-arg-type" })
+	public static void main(String[] args) {
         Holder<Apple> Apple = new Holder<Apple>(new Apple());
         Apple d = Apple.get();
         // Holder<Fruit> Fruit = Apple; // Cannot upcast

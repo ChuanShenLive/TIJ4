@@ -22,6 +22,7 @@ public class GenericArray2<T> {
         return (T[]) array;     // Warning: unchecked cast
     }
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         GenericArray2<Integer> gai = new GenericArray2<Integer>(10);
         for (int i = 0; i < 10; i ++) {

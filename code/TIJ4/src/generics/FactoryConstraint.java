@@ -4,9 +4,9 @@ package generics;
 interface FactoryI<T> {
     T create();
 }
-
+@SuppressWarnings("unused")
 class Foo2<T> {
-    private T x;
+	private T x;
     public <F extends FactoryI<T>> Foo2(F factory) {
         x = factory.create();
     }

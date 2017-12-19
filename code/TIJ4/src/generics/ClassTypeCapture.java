@@ -15,7 +15,8 @@ public class ClassTypeCapture<T> {
         return kind.isInstance(arg);
     }
 
-    public static void main(String[] args) {
+    @SuppressWarnings("rawtypes")
+	public static void main(String[] args) {
         ClassTypeCapture<Building> ctt1 = new ClassTypeCapture(Building.class);
         System.out.println(ctt1.f(new Building()));
         System.out.println(ctt1.f(new House()));

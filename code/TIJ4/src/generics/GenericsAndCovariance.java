@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenericsAndCovariance {
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
         // Wildcards allow covariance;
         List<? extends Fruit> flist = new ArrayList<Apple>();
         // Compil Error: can't add any type of object:

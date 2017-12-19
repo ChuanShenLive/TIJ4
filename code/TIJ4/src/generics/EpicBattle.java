@@ -83,7 +83,8 @@ public class EpicBattle {
 
 
 
-    public static <POWER extends SuperHearing & SuperSmell> void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static <POWER extends SuperHearing & SuperSmell> void main(String[] args) {
         EpicBattle eb = new EpicBattle();
         DogBoy dogBoy = new DogBoy();
         useSuperHearing(dogBoy);

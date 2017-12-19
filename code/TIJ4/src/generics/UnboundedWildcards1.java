@@ -4,8 +4,9 @@ package generics;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"unchecked", "rawtypes"})
 public class UnboundedWildcards1 {
-    static List list1;
+	static List list1;
     static List<?> list2;
     static List<? extends Object> list3;
 

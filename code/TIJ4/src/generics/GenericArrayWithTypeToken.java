@@ -18,7 +18,8 @@ public class GenericArrayWithTypeToken<T> {
         return array;
     }
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
         GenericArrayWithTypeToken<Integer> gai = new GenericArrayWithTypeToken<Integer>(Integer.class, 10);
         // This now works:
         Integer[] ia = gai.rep();
