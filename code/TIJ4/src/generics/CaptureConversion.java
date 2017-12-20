@@ -8,8 +8,14 @@ public class CaptureConversion {
 	}
 	static void f2(Holder<?> holder) {
 		f1(holder);	// Call with captured type
+		Object obj = holder.get();
+		System.out.println(obj.getClass().getSimpleName());
 	}
-	
+	static void f3(Holder holder) {
+		f1(holder);	// Call with captured type
+		Object obj = holder.get();
+		System.out.println(obj.getClass().getSimpleName());
+	}
 	@SuppressWarnings({ "rawtypes", "unchecked" })	
 	public static void main(String[] args) {
 		Holder raw = new Holder<Integer>(1);
@@ -21,6 +27,7 @@ public class CaptureConversion {
 		// Upcast to Holder<?>, still figures it out:
 		Holder<?> wildcarded = new Holder<Double>(1.0);
 		f2(wildcarded);
+		f3(wildcarded);
 	}
 } /* Output:
 Integer
