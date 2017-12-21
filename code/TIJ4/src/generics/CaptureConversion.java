@@ -11,6 +11,7 @@ public class CaptureConversion {
 		Object obj = holder.get();
 		System.out.println(obj.getClass().getSimpleName());
 	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	static void f3(Holder holder) {
 		f1(holder);	// Call with captured type
 		Object obj = holder.get();
