@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import sc.chuanshen.util.FourTuple;
 
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "hiding" })
 public class TupleList<A, B, C, D> extends ArrayList<FourTuple<A, B, C, D>> {
 	public static void main(String[] args) {
 		TupleList<Vehicle, Amphibian, String, Integer> tl =
