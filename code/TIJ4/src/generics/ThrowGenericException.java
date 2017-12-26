@@ -8,6 +8,7 @@ interface Processor<T, E extends Exception> {
 	void process(List<T> resultCollector) throws E;
 }
 
+@SuppressWarnings("serial")
 class ProcessRunner<T, E extends Exception> 
 	extends ArrayList<Processor<T, E>> {
 	List<T> processAll() throws E {
