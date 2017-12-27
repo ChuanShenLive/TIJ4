@@ -13,6 +13,7 @@ import sc.chuanshen.util.TwoTuple;
 class MixinProxy implements InvocationHandler {
 	Map<String, Object> delegatesByMethod;
 	
+	@SuppressWarnings("unchecked")
 	public MixinProxy(TwoTuple<Object, Class<?>>... pairs) {
 		delegatesByMethod = new HashMap<String, Object>();
 		for(TwoTuple<Object, Class<?>> pair : pairs) {
